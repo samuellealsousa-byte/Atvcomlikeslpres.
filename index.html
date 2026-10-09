@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leal Multiprint</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8e8ee;
+            color: #333;
+            margin: 0;
+        }
+
+        header {
+            background-color: white;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        header h1 {
+            margin: 10px 0;
+            color: #178edd;
+        }
+
+        main {
+            width: 600px;
+            max-width: 95%;
+            margin: 25px auto;
+        }
+
+        .post {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px #ccc;
+        }
+
+        .post h2 {
+            margin-top: 0;
+        }
+
+        .post img {
+            width: 100%;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+
+        .post p {
+            line-height: 1.5;
+        }
+
+        .botoes {
+            margin-top: 15px;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            border: none;
+        }
+
+        .whatsapp {
+            background-color: #25D366;
+        }
+
+        .instagram {
+            background-color: #C13584;
+        }
+
+        /* Botões de Like e Deslike */
+        .reacoes {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .reacao {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            background-color: #f5f5f5;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+
+        .reacao:hover {
+            background-color: #e0eaff;
+        }
+
+        .reacao.ativo {
+            background-color: #cce5ff;
+            border-color: #178edd;
+            font-weight: bold;
+        }
+
+        .reacao span {
+            margin-left: 5px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            header img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .post {
+                padding: 15px;
+            }
+
+            .botao {
+                display: inline-block;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="https://i.postimg.cc/Ghzn3GfF/Design-sem-nome.jpg"
+             alt="Logo da Leal Multiprint">
+
+        <h1>Leal Multiprint</h1>
+
+        <div class="botoes">
+            <a class="botao whatsapp"
+               href="https://w.app/3nbk8v"
+               target="_blank"
+               rel="noopener noreferrer">
+                Pedir pelo WhatsApp
+            </a>
+
+            <a class="botao instagram"
+               href="https://www.instagram.com/leal_multiprint/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Ver Instagram
+            </a>
+        </div>
+    </header>
+
+    <main id="inicio">
+
+        <article class="post">
+            <h2>Novidades da Leal Multiprint</h2>
+
+            <img src="https://i.postimg.cc/Bvydw1ZX/foto1.jpg"
+                 alt="Tags personalizadas da Leal Multiprint">
+
+            <p>
+                Tags personalizadas 😍😍😍
+                Leal Multiprint 💙💙💙
+            </p>
+
+            <div class="reacoes">
+                <button class="reacao" onclick="reagir(this, 'like')">
+                    👍 Like <span>0</span>
+                </button>
+
+                <button class="reacao" onclick="reagir(this, 'deslike')">
+                    👎 Deslike <span>0</span>
+                </button>
+            </div>
+        </article>
+
+        <article class="post">
+            <h2>Novidades da Leal Multiprint</h2>
+
+            <img src="https://i.postimg.cc/5tGZkF9L/foto2.jpg"
+                 alt="Caixa cenário para Dia dos Namorados">
+
+            <p>
+                Caixa cenário Dia dos Namorados 😍😍😍
+                Leal Multiprint 💙💙💙
+            </p>
+
+            <div class="reacoes">
+                <button class="reacao" onclick="reagir(this, 'like')">
+                    👍 Like <span>0</span>
+                </button>
+
+                <button class="reacao" onclick="reagir(this, 'deslike')">
+                    👎 Deslike <span>0</span>
+                </button>
+            </div>
+        </article>
+
+        <article class="post" id="sobre">
+            <h2>Sobre a Leal Multiprint</h2>
+
+            <p>
+                A Leal Multiprint trabalha com produtos e serviços personalizados,
+                oferecendo qualidade e praticidade para nossos clientes.
+            </p>
+        </article>
+
+        <article class="post" id="contato">
+            <h2>Entre em contato</h2>
+
+            <p>
+                Faça seu pedido pelo WhatsApp ou acompanhe nossos trabalhos pelo Instagram.
+            </p>
+
+            <div class="botoes">
+                <a class="botao whatsapp"
+                   href="https://w.app/3nbk8v"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    WhatsApp
+                </a>
+
+                <a class="botao instagram"
+                   href="https://www.instagram.com/leal_multiprint/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Instagram
+                </a>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Leal Multiprint</p>
+    </footer>
+
+    <script>
+        function reagir(botao, tipo) {
+            const publicacao = botao.closest(".post");
+            const botoes = publicacao.querySelectorAll(".reacao");
+
+            const botaoLike = botoes[0];
+            const botaoDeslike = botoes[1];
+
+            const jaAtivo = botao.classList.contains("ativo");
+
+            // Remove a reação anterior
+            botoes.forEach(function(b) {
+                b.classList.remove("ativo");
+            });
+
+            // Se clicar novamente, cancela a reação
+            if (!jaAtivo) {
+                botao.classList.add("ativo");
+            }
+
+            // Atualiza os números
+            botaoLike.querySelector("span").textContent =
+                botaoLike.classList.contains("ativo") ? 1 : 0;
+
+            botaoDeslike.querySelector("span").textContent =
+                botaoDeslike.classList.contains("ativo") ? 1 : 0;
+        }
+    </script>
+
+</body>
+</html>
